@@ -21,7 +21,7 @@ type User struct {
 }
 
 func BillFor(yearMonth string, activeSubscription *Subscription, users *[]User) float64 {
-
+	//Early return if there is no users
 	if len(*users) == 0 {
 		return 0
 	}
